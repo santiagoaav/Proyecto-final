@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #d9c4a2;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #a9825a;
+      padding: 10px 20px;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .social-icons button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 10px 10px;
+      font-size: 15px;
+      width: 150px;
+    }
+
+    .search-box button {
+      border: none;
+      background-color: #d9c4a2;
+      padding: 10px 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .search-box button:hover {
+      background-color: #c7ad87;
+    }
+ 
+    .sidebar {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 175px;
+      bottom: 40px;
+      background-color: #fff4c2;
+      padding-top: 30px;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 120px;
+      margin: 20px auto;
+      padding: 10px;
+      border: none;
+      background-color: #a9825a;
+      color: black;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar button:hover {
+      background-color: #c9a678;
+    }
+
+    .main {
+      margin-left: 175px;
+      background-color: #4e2e00;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      min-height: calc(100vh - 95px);
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    .item button:hover {
+      transform: scale(1.05);
+    }
+
+    .item img {
+      width: 230px;     
+      height: 500px;   
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .item h3 {
+      margin-top: 10px;
+      font-size: 26px;
+    }
+
+    footer {
+      background-color: #a9825a;
+      color: white;
+      text-align: center;
+      font-size: 13px;
+      padding: 4px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="social-icons">
+      <button onclick="window.open('https://www.facebook.com/cafecapitalrestaurante/?locale=es_LA', '_blank')">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+      </button>
+      <button onclick="window.open('https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcafecapitalrestaurante%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExUXZYclh1U0JkZHh1QUVXZQEePyb_azPdZRUSNRROlIIiIJ1lbpUQ_hNkCtLtTxRSC-XJSEVefL7K64ROkY0_aem_vaMspl7-8IBu0kxXE3TlWg&h=AT2qVUlnqyGRfqZfffnQU93vT3ULNYbfPl0W0utbMNTuVp68RGK0D4s2S4t7oKrK3c3Y2JfnIiQ3NdGK3TyJ5po60lfWzX1aoFBKy0z_yEew4BvpOhw_Uyql2PykY0zpeBPd', '_blank')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+      </button>
+      <button onclick="window.open('https://x.com/search?q=%23cafétéria&src=hashtag_click', '_blank')">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X">
+      </button>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
+    </div>
+  </div>
+  <div class="sidebar">
+    <button onclick="alert('Ver menú')">menu</button>
+    <button onclick="alert('Contactar en línea')">contacto online</button>
+    <button onclick="alert('Llamar por teléfono')">telefono</button>
+  </div>
+  <div class="main">
+    <div class="main-section">
+      <div class="item">
+        <button onclick="alert('Ver postres')">
+          <img src="https://st5.depositphotos.com/3605127/69045/i/450/depositphotos_690455228-stock-photo-piece-meringue-roll-raspberries-white.jpg" alt="Postres">
+          <h3>Postres</h3>
+        </button>
+      </div>
+      <div class="item">
+        <button onclick="alert('Ver café')">
+          <img src="https://images.unsplash.com/photo-1707953907896-6424ed45e6b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlJTIwYWVzdGhldGljfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Café">
+          <h3>cafe</h3>
+        </button>
+      </div>
+      <div class="item">
+        <button onclick="alert('Ver sucursales')">
+          <img src="https://solucioneshosteleras.com/blog/wp-content/uploads/2024/10/decoracion-1-1.jpg" alt="Sucursales">
+          <h3>Sucursales</h3>
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    @ 2025 santiago(cucuta) derechos reservados
+  </footer>
+</body>
+</html>
